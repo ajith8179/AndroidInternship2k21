@@ -9,47 +9,45 @@ import android.view.View;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-
-    // Declare all the views here
+    //Declare all the Views here
     EditText name,number,link;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Innitialise all views
+        //Initialise all the views here
         name = findViewById(R.id.name);
         number = findViewById(R.id.number);
         link = findViewById(R.id.link);
-
-
     }
+
 
     public void next(View view) {
-        // workinng with explict names
-        String n= name.getText().toString();
-        //Intent obj = new Intent (present class ,next class)
-        //startactivity(obj)
+        //Here we will work with the explicit intent
+        String n = name.getText().toString();
+        //Intent obj = new Intent(present class,next class)
+        //startActivity(obj)
         Intent i = new Intent(this,SecondActivity.class);
-        i.putExtra("Key",n);
+        i.putExtra("key",n);
         startActivity(i);
+
     }
 
-    public void dail(View view) {
-        //here implict intent
+    public void dial(View view) {
+        //Here we will work with Implicit intent
         String n = number.getText().toString();
-        //uri - resource identifier
-        //phone-tel web -https  ,loc=geo:lat,lon
-        Uri uri=Uri.parse("tel:"+n);
-        Intent i=new Intent(Intent.ACTION_DIAL,uri);
+        //Uri - Unified resource identifier
+        //phone - tel:, web - https:// , loc - geo:lat,lon
+        Uri uri = Uri.parse("tel:"+n);
+        Intent i = new Intent(Intent.ACTION_DIAL,uri);
         startActivity(i);
-
     }
+
 
     public void search(View view) {
-        String n=link.getText().toString();
-        Uri uri=Uri.parse("https://"+n);
-        Intent i= new Intent(Intent.ACTION_VIEW,uri);
+        String n = link.getText().toString();
+        Uri uri = Uri.parse("https://"+n);
+        Intent i = new Intent(Intent.ACTION_VIEW,uri);
         startActivity(i);
     }
 }

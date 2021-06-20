@@ -11,9 +11,8 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-        //reading data from first activity
-        String n= getIntent().getStringExtra("Key");
-        //display welcome
-        Toast.makeText(this,"Welcome "+n,Toast.LENGTH_SHORT).show();
+        String n = getIntent().getStringExtra("key");
+        Toast.makeText(this, "Welcome "+n, Toast.LENGTH_SHORT).show();
+
     }
 }
