@@ -13,50 +13,46 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Log.i("APSSDC","First Activity created");
+        Log.i("APSSDC","First Activity Created");
     }
 
     @Override
     protected void onStart() {
         super.onStart();
-        Log.i("APSSDC","First Activity started");
-
+        Log.i("APSSDC","First Activity Started");
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.i("APSSDC","First Activity resume");
+        Log.i("APSSDC","First Activity Resumed");
     }
-
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.i("APSSDC","First Activity paused");
-    }
-
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        Log.i("APSSDC","First Activity restart");
+        Log.i("APSSDC","First Activity Paused");
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.i("APSSDC","First Activity stop");
+        Log.i("APSSDC","First Activity Stopped");
+    }
 
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        Log.i("APSSDC","First Activity Restarted");
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.i("APSSDC","First Activity destory");
+        Log.i("APSSDC","First Activity Destroyed");
     }
 
     public void next(View view) {
-        Intent i=new Intent(this,secondactivity.class);
-        startActivity(i);
+        startActivity(new Intent(this,SecondActivity.class));
     }
 }

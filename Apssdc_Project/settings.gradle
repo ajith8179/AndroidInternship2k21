@@ -1,0 +1,2 @@
+rootProject.name = "Apssdc_Project"
+include ':app'
