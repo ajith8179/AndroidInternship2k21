@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.apssdc_project">
+    package="com.example.projectdemo">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -10,10 +10,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Apssdc_Project">
-        <activity android:name=".Cplus" />
-        <activity android:name=".Python" />
-        <activity android:name=".java" />
+        android:theme="@style/Theme.Projectdemo">
+        <activity android:name=".HomeActivity"></activity>
+        <activity android:name=".Register" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
